@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            color: #333;
+        }
+        h2 {
+            color: #007bff;
+            margin-top: 20px;
+        }
+        .model-info-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .model-info {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .model-info p {
+            margin: 10px 0;
+        }
+        .best-model-container {
+            position: relative;
+            overflow: hidden;
+            font-size: 24px; /* Adjust font size as needed */
+            font-weight: bold;
+            color: #fff; /* White color for best model text */
+            text-align: center;
+            background-color: green;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+        @keyframes floatAnimation {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Results</h1>
+    <div class="model-info-container">
+        <div class="model-info">
+            <h2>CNN Model</h2>
+            <p>Predicted Class: {{ cnn_predicted_class }}</p>
+            <p>Accuracy: {{ cnn_accuracy }}</p>
+        </div>
+        <div class="model-info">
+            <h2>ANN Model</h2>
+            <p>Predicted Class: {{ ann_predicted_class }}</p>
+            <p>Accuracy: {{ ann_accuracy }}</p>
+        </div>
+        <div class="model-info">
+            <h2>RNN Model</h2>
+            <p>Predicted Class: {{ rnn_predicted_class }}</p>
+            <p>Accuracy: {{ rnn_accuracy }}</p>
+        </div>
+    </div>
+    <div class="best-model-container">
+        <span class="best-model">BEST MODEL : CNN</span>
+    </div>
+</body>
+</html>
