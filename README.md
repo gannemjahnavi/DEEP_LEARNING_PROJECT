@@ -44,7 +44,7 @@ Based on the results obtained, it can be concluded that Convolutional Neural Net
 
 ## Contributors
 
-- G Srinivasa Eswara Varaprasad Tarunkumar (@varaprasadtarunkumar)
+- G Srinivasa Eswara Varaprasad Tarunkumar (https://github.com/varaprasadtarunkumar)
 
 ## License
 
